@@ -44,6 +44,9 @@ presence.on("UpdateData", async () => {
 			? "logo"
 			: document.querySelector<HTMLAnchorElement>("#sku-details .image a").href;
 		presenceData.state = prive ? "HAHA" : productName;
+		presenceData.buttons = [
+			{ label: "Δες το!", url: window.location.href },
+		];
 	}
 	//Update the presence with all the values from the presenceData object
 	if (presenceData.details) presence.setActivity(presenceData);
