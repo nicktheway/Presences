@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.premid.app/metadata/1.7",
+  "service": "Skroutz",
+  "author": {
+    "id": "288824906722836480",
+    "name": "ntw"
+  },
+  "description": {
+    "en": "Find millions of products, discover thousands of offers & read user opinions. Purchase guarantee with immediate purchase from Skroutz!",
+    "el_GR": "Βρες εκατομμύρια προϊόντα, ανακάλυψε χιλιάδες προσφορές & διάβασε απόψεις χρηστών. Εγγύηση ασφάλειας με άμεση αγορά από το Skroutz!"
+  },
+  "url": "www.skroutz.gr",
+  "version": "1.0.0",
+  "logo": "https://i.imgur.com/pt4yciy.png",
+  "thumbnail": "https://i.imgur.com/sA1FGPw.png",
+  "color": "#f68a25",
+  "tags": [
+    "skroutz",
+    "shopping"
+  ],
+  "category": "other",
+  "settings": [
+    {
+      "id": "privacy",
+      "title": "Απόρρητο",
+      "icon": "fad fa-user-secret",
+      "value": false
+    }
+  ]
+}
