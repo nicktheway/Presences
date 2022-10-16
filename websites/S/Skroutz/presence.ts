@@ -30,6 +30,19 @@ presence.on("UpdateData", async () => {
 		presenceData.buttons = [
 			{ label: "Δες το!", url: window.location.href },
 		];
+	} else if (pathname.startsWith("/cart")) {
+		// Cart
+		presenceData.details = "Βλέπει το Καλάθι";
+		if (!prive && document.querySelectorAll(".line-item").length) {
+			let itemsCount = document.querySelectorAll(".line-item").length;
+			let total = document.querySelector("strong[data-e2e-testid='cart-total-cost']").textContent;
+
+			if (itemsCount == 1) {
+				presenceData.state = `1 προϊόν (${total})`;
+			} else if (itemsCount > 1){
+				presenceData.state = `${itemsCount} προϊόντα (${total})`;
+			}
+		}
 	}
 	if (presenceData.details) presence.setActivity(presenceData);
 	else presence.setActivity();
