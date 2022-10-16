@@ -36,10 +36,8 @@ presence.on("UpdateData", async () => {
 			let itemsCount = document.querySelectorAll(".line-item").length;
 			let total = document.querySelector("strong[data-e2e-testid='cart-total-cost']").textContent;
 
-			if (itemsCount == 1) {
-				presenceData.state = `1 προϊόν (${total})`;
-			} else if (itemsCount > 1){
-				presenceData.state = `${itemsCount} προϊόντα (${total})`;
+			if (itemsCount) {
+				presenceData.state = `${itemsCount} ${itemsCount > 1 ? "προϊόντα" : "προϊόν"} (${total})`;
 			}
 		}
 	}
