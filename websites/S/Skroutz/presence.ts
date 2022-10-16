@@ -31,7 +31,6 @@ presence.on("UpdateData", async () => {
 			{ label: "Δες το!", url: window.location.href },
 		];
 	} else if (pathname.startsWith("/cart")) {
-		// Cart
 		presenceData.details = "Βλέπει το Καλάθι";
 		if (!prive && document.querySelectorAll(".line-item").length) {
 			let itemsCount = document.querySelectorAll(".line-item").length;
